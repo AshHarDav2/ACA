@@ -5,15 +5,17 @@ import java.util.Scanner;
 public class Task17 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String Number = scanner.next();
-        int digits = Number.length();
-        System.out.println("digits are " + digits);
-        int DigitsSum = 0;
-        int i = 0;
-        while (i<digits) {
-            DigitsSum += Number.charAt((args.length)-i);
-            i++;
+        int Number = scanner.nextInt();
+        int x = Number;
+        int length = 0, sum = 0;
+        while(x!=0){
+            x/=10;
+            length++;
         }
-        System.out.println(DigitsSum);
+        for (int i =0; i<length; i++){
+            sum += Number%10;
+            Number/=10;
+        }
+        System.out.println(sum);
     }
 }
