@@ -8,5 +8,6 @@ public class problem10 {
         int number = scanner.nextInt();
         int lastDigit = number%10;
         System.out.println(lastDigit);
+	System.out.println(lastDigit);
     }
 }
